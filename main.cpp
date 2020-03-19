@@ -42,14 +42,7 @@ string tekst;
 tekst = "nie";	
 	
 	
-isPalindrome("Kobyla ma maly bok");
-isPalindrome("abc");
-isPalindrome("Aaa");
-isPalindrome("Abba");
-isPalindrome("121");
-isPalindrome("1 221");
-isPalindrome("aa aab");
-
+isPalindrome;
 
 if (isPalindrome(tekst) == 1) {
 tekst = "Tak";	
@@ -61,7 +54,7 @@ tekst = "Tak";
        		 ofstream plik;
 
 				  plik.open ("C:\\Users\\WAHuben\\Desktop\\Zadanie\\zapiss.txt");
-				  plik << ;
+				  plik << tekst;
 				  plik.close();
 
 
