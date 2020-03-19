@@ -31,32 +31,28 @@ bool isPalindrome(string s)
                         return palindrome;
                         
                         
-                        
 }
 
 int main()
 {
 
-
-string tekst;
-tekst = "nie";	
-	
-	
-isPalindrome;
-
-if (isPalindrome(tekst) == 1) {
-tekst = "Tak";	
-
-
-}
-
-
-       		 ofstream plik;
+       		ofstream plik;
 
 				  plik.open ("C:\\Users\\WAHuben\\Desktop\\Zadanie\\zapiss.txt");
-				  plik << tekst;
+				  
+				  
+				  
+				  plik << isPalindrome("Kobyla ma maly bok");
+				  plik << isPalindrome("abc");
+				  plik << isPalindrome("Aaa");
+				  plik << isPalindrome("Abba");
+				  plik << isPalindrome("121");
+				  plik << isPalindrome("1 221");
+				  plik << isPalindrome("aa aab");
+				
 				  plik.close();
 
 
         return 0;
+
 }
