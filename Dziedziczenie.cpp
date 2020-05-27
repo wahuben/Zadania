@@ -6,7 +6,6 @@
 
 using namespace std;
 
-
 class gra
 {
 	
@@ -16,46 +15,45 @@ class gra
 		string napis;
 		
 		ifstream plik1;
-    	ofstream plik2;
+    	        ofstream plik2;
 		
 		gra();
-        ~gra();
+                ~gra();
 		
-		void wprowadzPlik();
+		void wprowadz();
 };
 
 gra::gra(){
-    plik1.open("c:\\palindromy.txt");
+    plik1.open("c:\\dogry.txt");
     plik2.open("c:\\wynikJSON.txt");
 };
 
-void gra::wprowadzPlik(){
+void gra::wprowadz(){
 	
 	 int i=0;
 	
 	 if(plik1.good())  
-        while(!plik1.eof()&&i<3){
+         while(!plik1.eof()&&i<3){
             getline(plik1, napis);
 			gameInfo.push_back(napis);i++;				
         }
 
 };
 
-class graFPS:public gra
+class grafps:public gra
 {
-	string tryb;				
-	
-	public:
-		void wprowadz_FPSA();
-		void wypisz_FPSA();
+	string tryb;					
+	    public:
+		void wprowadzfps();
+		void wypiszfps();
 };
 
-void graFPS::wprowadz_FPSA(){
-	wprowadzPlik();
-	plik1>>tryb;
+void grafpa::wprowadzfps(){
+	wprowadz();
+	    plik1>>tryb;
 };
 
-void graFPS::wypisz_FPSA(){
+void grafps::wypiszfps(){
 	plik2<<"{\"nazwa"<<"\":\""<<gameInfo[0]<<"\",\"rok\":\""<<gameInfo[1]<<"\,\"producent\":\""
 	<<gameInfo[2]<<"\",\"tryb"<<"\":\""<<tryb<<"\"}";
 };
@@ -65,9 +63,9 @@ gra::~gra(){
     plik2.close();
 }
 
-int main(int argc, char** argv) {
-	graFPS g1;
-	g1.wprowadz_FPSA();
-	g1.wypisz_FPSA();
+int main() {
+	grafps s1;
+	s1.wprowadzfps();
+	s1.wypiszfps();
 	return 0;
 }
