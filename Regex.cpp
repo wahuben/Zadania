@@ -4,19 +4,19 @@
 #include <string>
 using namespace std;
 
-class sprawdzenie {
+class sprawdz {
        ifstream plik1;
        ofstream plik2;
 public:
-        sprawdzenie();
-        ~sprawdzenie();
+        sprawdz();
+        ~sprawdz();
     void match();
 };
-sprawdzenie::sprawdzenie() {
+sprawdz::sprawdz() {
     plik1.open("C:\plik1.txt");
     plik2.open("C:\plik2.txt");
 }
-void sprawdzenie::match() {
+void sprawdz::match() {
     string input;
         regex regularne("[0-9]{2}-[0-9]{3}");
         while(!plik1.eof()) {
@@ -26,13 +26,13 @@ void sprawdzenie::match() {
             }
         }
 }
-sprawdzenie::~sprawdzenie() {
+sprawdz::~sprawdz() {
     plik1.close();
     plik.close();
 }
 
 int main() {
-    sprawdzenie s1;
+    sprawdz s1;
     s1.match();
     return 0;
 }
