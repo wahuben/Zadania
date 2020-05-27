@@ -1,16 +1,15 @@
 #include <iostream>
 #include <fstream>
-#include <cstdlib>
 #include <string>
 #include <vector>
+#include <cstdlib>
+
 
 using namespace std;
 
 class gra
-{
-	
-	public:
-		
+{	
+	public:		
 		vector<string> gameInfo;
 		string napis;
 		
